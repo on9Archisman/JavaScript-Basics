@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Loader</title>
+</head>
+<body>
+    <h1>JavaScript Full Course</h1>
+
+    <button onclick="loadScript('first.js')">Variables & Data Types</button>
+    <br>
+    <br>
+    <button onclick="loadScript('second.js')">Operators and Conditional Statements</button>
+
+    <script>
+        function loadScript(scriptName) {
+            console.clear();
+
+            // Remove any previously loaded scripts
+            const existingScript = document.getElementById("dynamicScript");
+            if (existingScript) {
+                existingScript.remove();
+            }
+
+            // Create a new script tag
+            const script = document.createElement("script");
+            script.src = scriptName;
+            script.id = "dynamicScript";
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
