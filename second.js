@@ -94,3 +94,26 @@ console.log("a =", a);
     console.log("aa > bb || aa === bb =", aa > bb || aa === bb);
     console.log("!(aa === bb) =", !(aa === bb));
 }
+
+// Conditional Statements
+
+let num = prompt("Enter a number !!");
+
+if (num > 1) {
+    if (num % 2 === 0) {
+        console.log(num, "is multiple of 2");
+    } else if (num % 3 === 0) {
+        console.log(num, "is multiple of 3");
+    } else if (num % 5 === 0) {
+        console.log(num, "is multiple of 5");
+    } else if (num % 7 === 0) {
+        console.log(num, "is multiple of 7");
+    } else {
+        console.log(num, "We cover it later !!");
+    }
+} else {
+    console.log("The entered number must be grated than 1");
+}
+
+// Ternary Operator
+num % 2 === 0 ? console.log("EVEN") : console.log("ODD");
